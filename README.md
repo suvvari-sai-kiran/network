@@ -1,4 +1,5 @@
 # network
+
 Switch Monitoring Dashboard
 
 This project is a simple web-based dashboard to monitor the status of network switches using Python.
