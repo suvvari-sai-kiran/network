@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Switch Monitoring Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h2>CUTMAP Switch Monitoring Dashboard</h2>
+
+    <div class="dashboard">
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr><th>Switch IP</th><th>Status</th></tr>
+                </thead>
+                <tbody id="switchTable"></tbody>
+            </table>
+        </div>
+        <div class="chart-container">
+            <canvas id="statusChart"></canvas>
+        </div>
+    </div>
+
+    <div class="status-container">
+        <div class="box up">UP: <span id="upCount">0</span></div>
+        <div class="box down">DOWN: <span id="downCount">0</span></div>
+        <div class="box total">TOTAL: <span id="total">0</span></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
